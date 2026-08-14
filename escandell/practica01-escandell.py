@@ -44,7 +44,7 @@ def calcular_datos(matriz):
         for i in range(len(matriz[1])):
             if matriz[1][i] % 100 == 0:
                 c_multiplos = c_multiplos + 1
-                print("MONTOS MULTIPLOS DE 100:: ")
+                print("MONTOS MULTIPLOS DE 100: ")
                 print(matriz[1][i])
             if matriz[1][i] % 2 == 0:
                 c_pares = c_pares + 1
@@ -59,7 +59,7 @@ def calcular_datos(matriz):
 
         c_inferiores = 0 
         c_superiores = 0
-        contador_aux = 0
+        c_aux = 0
         if matriz[0][0] >= 15000:
             for j in range (len(matriz[1])):
                 print(matriz[1][j])
@@ -68,7 +68,7 @@ def calcular_datos(matriz):
                 elif matriz[1][j] > 15000:
                     c_superiores = c_superiores + 1
                 else:
-                    contador_aux = contador_aux + 1
+                    c_aux = c_aux + 1
         else:
             print()
             print("==========================================================")
@@ -78,8 +78,8 @@ def calcular_datos(matriz):
             print()
             return
 
-        total = c_inferiores + c_superiores + contador_aux
-        porcentaje = c_inferiores / total * 100
+        total = c_inferiores + c_superiores + c_aux
+        porcentaje = (c_inferiores + c_aux) / total * 100
 
         print("CANTIDAD DE PARES:", c_pares, "MONTO ACUMULADO: ", acumulador)
         print(porcentaje,"%" " SON INFERIORES DE 15.000" , sep="")
